@@ -1,8 +1,8 @@
 ( defun transicion (color-actual cambiar-a)
     (cond
-      ((and (eq color-actual 'rojo ) (eq cambiar-a 'verde)) (list color-actual "cambiar-a-verde"))
-      ((and (eq color-actual 'verde ) (eq cambiar-a 'amarillo)) (list color-actual "cambiar-a-amarillo"))
-      ((and (eq color-actual 'amarillo ) (eq cambiar-a 'rojo)) (list color-actual "cambiar-a-rojo"))
+      ((and (equal color-actual 'rojo ) (equal cambiar-a 'verde)) (list color-actual "cambiar-a-verde"))
+      ((and (equal color-actual 'verde ) (equal cambiar-a 'amarillo)) (list color-actual "cambiar-a-amarillo"))
+      ((and (equal color-actual 'amarillo ) (equal cambiar-a 'rojo)) (list color-actual "cambiar-a-rojo"))
       (t (list color-actual 'color-por-defecto))
     )
 )
@@ -14,3 +14,5 @@
 ('rojo "cambiar-a-verde")
 ('rojo 'color-por-defecto)
 ('amarillo "cambiar-a-verde")
+
+;hice un cambio boludo y cambie eq por equal
